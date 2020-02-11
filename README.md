@@ -1,6 +1,6 @@
 **Headless CMS is required before installing, which can be found at https://github.com/chrsmrtn81/ReactMagicEightballCMS/**
 
-Once the headless CMS has been installed go into src/App.js and update the `apiURL` property in `window.globalVars` with the correct API URL
+**Once the headless CMS has been installed go into src/App.js and update the `apiURL` property in `window.globalVars` with the correct API URL**
 
 
 
