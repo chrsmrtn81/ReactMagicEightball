@@ -1,6 +1,8 @@
 **Headless CMS is required before installing - https://github.com/chrsmrtn81/ReactMagicEightballCMS/**
 
-Once the headless CMS has been installed, in src/App.js update the `apiURL` property in `window.globalVars` with the correct API URL
+Once the headless CMS has been installed go into src/App.js and update the `apiURL` property in `window.globalVars` with the correct API URL
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
