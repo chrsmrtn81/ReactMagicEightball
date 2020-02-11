@@ -95,18 +95,18 @@ class Eightball extends Component {
             } else {
                 setTimeout(() => {
   
-                    // axios.post(window.globalVars.apiURL + 'predictions', {
-                    //     question: prediction[1],
-                    //     answer: prediction[0]
-                    //     })
-                    //     .then(response => {
-                    //     })
-                    //     .catch(error => {
-                    //         console.log(error);
-                    //     });
+                    axios.post(window.globalVars.apiURL + 'predictions', {
+                        question: prediction[1],
+                        answer: prediction[0]
+                        })
+                        .then(response => {
+                        })
+                        .catch(error => {
+                            console.log(error);
+                        });
 
-                    console.log(prediction[0]);
-                    console.log(prediction[1]);
+                    // console.log(prediction[0]);
+                    // console.log(prediction[1]);
                     this.setState({postPrediction : !this.state.postPrediction});
                     
                 }, 100);
