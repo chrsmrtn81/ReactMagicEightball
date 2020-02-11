@@ -1,0 +1,219 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+// Colours
+$black: #000;
+$white: #fff;
+
+// Styles
+body {
+    background-color: $black;
+    color: $white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Spicy Rice', cursive;
+    font-weight: normal;
+    font-size: 3rem;
+    margin: 22px 0;
+}
+
+h2 {
+    font-family: 'Spicy Rice', cursive;
+    font-weight: normal;
+    font-size: 2.25rem;
+    margin: 22px 0;
+}
+
+h3 {
+    font-family: 'Spicy Rice', cursive;
+    font-weight: normal;
+    font-size: 1.5rem;
+    margin: 22px 0;
+}
+
+header {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+input, button {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.mb-1 {
+    margin-bottom: 24px;
+}
+
+.mt-1 {
+    margin-top: 24px;
+}
+
+.my-1 {
+    margin: 24px 0;
+}
+
+.btn {
+    width: 30%;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+        background-position: 100% 0;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &.success {
+        background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+        box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+    }
+
+    &.error {
+        background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);  box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+    }
+
+}
+
+.question {
+
+    &__label {
+        color: mediumpurple;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 5px;
+        text-align: center; 
+        font-size: 0.875rem;
+    }
+
+    &__input {
+        background: none;
+        border: 1px solid mediumpurple;
+        padding: 16px;
+        font-size: 1rem;
+        width: 50%;
+        border-radius: 32px;
+        color: #fff;
+        box-shadow: 0px 0px 20px purple, 0 0 30px purple;
+        text-align: center;
+    }
+
+}
+
+.answer {
+
+    &__container {
+        display: none;
+        position: absolute;
+        width: 100%;
+    }
+
+    &__text {
+        text-align: center;
+        text-shadow: 0px 0px 20px purple, 0 0 30px purple;
+        -webkit-text-stroke: 1px mediumpurple;
+    }
+
+    &--show {
+        display: block;
+        animation: fadein 2s;
+        -moz-animation: fadein 2s; /* Firefox */
+        -webkit-animation: fadein 2s; /* Safari and Chrome */
+    
+        @keyframes fadein {
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-moz-keyframes fadein { /* Firefox */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-webkit-keyframes fadein { /* Safari and Chrome */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+    }
+
+}
+
+.eightball {
+
+    &__container {
+        text-align: center; 
+        overflow: hidden;
+    }
+
+    &__image {
+        max-height: 45vh;
+        max-width: 45vw;
+    }
+
+    &--shake {
+        animation: shake 0.8s;
+        animation-iteration-count: infinite;
+    
+        @keyframes shake {
+            0% { transform: translate(3px, 3px) rotate(0deg); }
+            10% { transform: translate(-3px, -6px) rotate(-3deg); }
+            20% { transform: translate(-6px, 6px) rotate(3deg); }
+            30% { transform: translate(9px, 6px) rotate(0deg); }
+            40% { transform: translate(3px, -3px) rotate(3deg); }
+            50% { transform: translate(-3px, 6px) rotate(-3deg); }
+            60% { transform: translate(-9px, 3px) rotate(0deg); }
+            70% { transform: translate(9px, 3px) rotate(-3deg); }
+            80% { transform: translate(-3px, -3px) rotate(3deg); }
+            90% { transform: translate(3px, 6px) rotate(0deg); }
+            100% { transform: translate(3px, -6px) rotate(-3deg); }
+        }
+    }
+
+    &--hide {
+        position:relative;
+        transition: transform 1s ease-in, opacity 1s ease-in;
+        -webkit-transition: -webkit-transform 1s ease-in, opacity 1s ease-in;
+        transform: rotate(720deg) scale(0);
+        -webkit-transform: rotate(720deg) scale(0);
+        opacity: 0;
+    }
+
+}
+
+
+
